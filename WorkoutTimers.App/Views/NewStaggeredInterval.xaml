@@ -20,7 +20,7 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
-            <RowDefinition Height="9*"/>
+            <RowDefinition Height="10*"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
@@ -37,9 +37,10 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="{x:Type lib:IntervalDuration}">
                         <Entry Placeholder="00:00" 
-                               Text="{Binding Path=Duration, Mode=TwoWay}, 
-                            Converter={StaticResource Key=durationConverter, 
-                            ConverterPerameter='mm\\:ss'}"/>
+                               Text="{Binding Path=Duration, 
+                            Mode=TwoWay, 
+                            Converter={StaticResource Key=durationConverter}, 
+                            ConverterParameter='mm\\:ss'}"/>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
                 

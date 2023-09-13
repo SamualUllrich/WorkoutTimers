@@ -24,12 +24,8 @@
                         <Label Text="{Binding Repetitions}"/>
                         <Label Text="{Binding Duration}"/>
                     </VerticalStackLayout>
-                    
                 </DataTemplate>
-                
             </CollectionView.ItemTemplate>
-            
         </CollectionView>
-        
     </StackLayout>
 </ContentPage>
