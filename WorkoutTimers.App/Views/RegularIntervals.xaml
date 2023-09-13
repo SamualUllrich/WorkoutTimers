@@ -15,7 +15,7 @@
 
         <CollectionView ItemsSource="{Binding Intervals}">
             <CollectionView.ItemsLayout>
-                <GridItemsLayout Orientation="Vertical" Span="{OnPlatform Android=2, WinUI=3,Default=2}"/>
+                <GridItemsLayout Orientation="Vertical" Span="{OnPlatform Android=2, WinUI=3, Default=2}"/>
             </CollectionView.ItemsLayout>
             <CollectionView.ItemTemplate>
                 <DataTemplate  x:DataType="{x:Type lib:RegularIntervalModel}">

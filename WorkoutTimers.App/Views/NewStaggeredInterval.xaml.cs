@@ -2,8 +2,9 @@ namespace WorkoutTimers.App.Views;
 
 public partial class NewStaggeredInterval : ContentPage
 {
-	public NewStaggeredInterval()
+	public NewStaggeredInterval(Lib.ViewModels.NewStaggeredIntervalModel model)
 	{
 		InitializeComponent();
+		BindingContext = model;
 	}
 }
