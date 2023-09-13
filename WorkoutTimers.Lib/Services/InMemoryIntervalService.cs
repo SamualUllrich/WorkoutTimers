@@ -21,6 +21,18 @@ namespace WorkoutTimers.Lib.Services
                 Duration = TimeSpan.FromMinutes(1),
                 Repetitions = 5
             });
+            _intervals.Add(new RegularIntervalModel
+            {
+                Name = "Pushups",
+                Duration = TimeSpan.FromSeconds(30),
+                Repetitions = 5
+            });
+            _intervals.Add(new RegularIntervalModel
+            {
+                Name = "Planks",
+                Duration = TimeSpan.FromMinutes(1),
+                Repetitions = 10
+            });
 
             _staggereds.Add(new StaggeredIntervalModel
             {

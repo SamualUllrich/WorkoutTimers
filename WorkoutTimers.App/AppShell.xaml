@@ -18,10 +18,11 @@
         ContentTemplate="{DataTemplate views:StaggeredIntervals}"
         Route="StaggeredIntervals" />
     </FlyoutItem>
-    <ShellContent
-        Title="Run Example"
-        ContentTemplate="{DataTemplate views:RunInterval}"
-        Route="RunInterval" />
+    
+    <!--<ShellContent
+        Title="User Profile"
+        ContentTemplate="{DataTemplate views:UserProfile}"
+        Route="UserProfile" />-->
 
     <MenuItem Text="Settings" Command="{Binding NavigateToSettingsCommand}" /> 
 </Shell>

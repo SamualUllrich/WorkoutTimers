@@ -52,4 +52,10 @@
 	  <ProjectReference Include="..\WorkoutTimers.Lib\WorkoutTimers.Lib.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <MauiXaml Update="Views\UserProfile.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
 </Project>
