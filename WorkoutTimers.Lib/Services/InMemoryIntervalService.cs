@@ -38,11 +38,11 @@ namespace WorkoutTimers.Lib.Services
             {
                 Name = "Staggered 1",
                 Repetitions = 1,
-                Durations = new ObservableCollection<TimeSpan>
+                Durations = new ObservableCollection<IntervalDuration>
                 {
-                    TimeSpan.FromMinutes(1),
-                    TimeSpan.FromSeconds(30),
-                    TimeSpan.FromMinutes(1)
+                    new IntervalDuration {Duration= TimeSpan.FromMinutes(1) },
+                    new IntervalDuration {Duration= TimeSpan.FromMinutes(30) },
+                    new IntervalDuration {Duration= TimeSpan.FromMinutes(1) }
                 }
             });
         }

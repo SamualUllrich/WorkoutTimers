@@ -4,8 +4,14 @@
              x:Class="WorkoutTimers.App.Views.NewStaggeredInterval"
              Title="New Staggered Interval"
              xmlns:lib="clr-namespace:WorkoutTimers.Lib.ViewModels;assembly=WorkoutTimers.Lib"
-             x:DataType="{x:Type lib:NewStaggeredIntervalModel}">
+             x:DataType="{x:Type lib:NewStaggeredIntervalModel}"
+             xmlns:converters="clr-namespace:WorkoutTimers.App.Converters"
+             >
+    
     <Grid Margin="5" RowSpacing="5">
+        <Grid.Resources>
+            <converters:TimeSpanConverter x:Key="durationConverter"/>
+        </Grid.Resources>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="2*"/>
@@ -14,7 +20,7 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
-            <RowDefinition Height="10*"/>
+            <RowDefinition Height="9*"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
@@ -29,8 +35,11 @@
         <Border Stroke="Grey" Grid.Row="3" Grid.Column="2">
             <CollectionView ItemsSource="{Binding Model.Durations}">
                 <CollectionView.ItemTemplate>
-                    <DataTemplate x:DataType="{x:Type x:TimeSpan}">
-                        <Entry Placeholder="00:00" Text="{Binding Path=.,Mode=TwoWay}"/>
+                    <DataTemplate x:DataType="{x:Type lib:IntervalDuration}">
+                        <Entry Placeholder="00:00" 
+                               Text="{Binding Path=Duration, Mode=TwoWay}, 
+                            Converter={StaticResource Key=durationConverter, 
+                            ConverterPerameter='mm\\:ss'}"/>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
                 
