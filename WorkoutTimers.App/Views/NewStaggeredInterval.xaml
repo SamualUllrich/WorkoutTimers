@@ -29,7 +29,7 @@
         <Entry Text="{Binding Model.Name, Mode=TwoWay}" Grid.Column="1" Placeholder="Name" />
 
         <Label Text="Repititions" Grid.Row="1"/>
-        <Entry Text="{Binding Model.Repetitions, Mode=TwoWay}" Grid.Column="1" Grid.Row ="1" Placeholder="Repititions"/>
+        <Entry Text="{Binding Model.Repetitions, Mode=TwoWay}" Style="{StaticResource Key=numberEntry}" Grid.Column="1" Grid.Row ="1" Placeholder="Repititions"/>
         
         <Label Text="Durations" Grid.Row="2"/>
         <Border Stroke="Grey" Grid.Row="3" Grid.Column="2">
