@@ -121,6 +121,11 @@
     </Style>
 
     <Style TargetType="Entry">
+        <Style.Triggers>
+            <Trigger TargetType="Entry" Value="0" Property="Text">
+                <Setter Property="BackgroundColor" Value="Red"/>
+            </Trigger>
+        </Style.Triggers>
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
         <Setter Property="BackgroundColor" Value="Transparent" />
         <Setter Property="FontFamily" Value="OpenSansRegular"/>
