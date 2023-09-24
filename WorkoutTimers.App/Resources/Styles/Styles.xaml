@@ -40,6 +40,11 @@
                             <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray600}}" />
                         </VisualState.Setters>
                     </VisualState>
+                    <VisualState x:Name="Preesed">
+                        <VisualState.Setters>
+                            <Setter Property="Scale" Value="0.8"/>
+                        </VisualState.Setters>
+                    </VisualState>
                 </VisualStateGroup>
             </VisualStateGroupList>
         </Setter>
@@ -113,6 +118,11 @@
                     <VisualState x:Name="Disabled">
                         <VisualState.Setters>
                             <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray600}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Focused">
+                        <VisualState.Setters>
+                            <Setter Property="FontAttributes" Value="Italic"/>
                         </VisualState.Setters>
                     </VisualState>
                 </VisualStateGroup>
