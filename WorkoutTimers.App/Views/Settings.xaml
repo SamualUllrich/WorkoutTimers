@@ -15,6 +15,9 @@
                 <EntryCell Label="Server URL" Keyboard="Url"/>
                 <EntryCell Label="User email" Keyboard="Email"/>
             </TableSection>
+            <TableSection Title="OS Info">
+                <TextCell Text="{Binding OSVersion}"/>
+            </TableSection>
         </TableRoot>
         
     </TableView>

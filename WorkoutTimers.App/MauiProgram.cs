@@ -27,6 +27,9 @@ namespace WorkoutTimers.App
                 .AddTransient<Views.NewStaggeredInterval>()
                 .AddTransient<Views.NewRegularInterval>()
                 .AddSingleton<Views.Settings>()
+#if ANDROID
+                .AddSingleton<Lib.Services.IVersionInfo, Lib.VersionInfo>()
+#endif
                 ;
 
             return builder.Build();
